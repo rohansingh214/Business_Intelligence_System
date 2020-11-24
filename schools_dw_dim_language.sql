@@ -1,0 +1,53 @@
+-- MySQL dump 10.13  Distrib 8.0.17, for Win64 (x86_64)
+--
+-- Host: localhost    Database: schools_dw
+-- ------------------------------------------------------
+-- Server version	8.0.17
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `dim_language`
+--
+
+DROP TABLE IF EXISTS `dim_language`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `dim_language` (
+  `Language_Id` int(11) NOT NULL,
+  `Language` varchar(50) DEFAULT NULL,
+  `DI_Job_ID` varchar(20) DEFAULT NULL,
+  `DI_Create_Date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`Language_Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `dim_language`
+--
+
+LOCK TABLES `dim_language` WRITE;
+/*!40000 ALTER TABLE `dim_language` DISABLE KEYS */;
+INSERT INTO `dim_language` VALUES (1,'Afar',NULL,'2019-12-10 18:06:52'),(2,'Afrikaans',NULL,'2019-12-10 18:06:52'),(3,'Akan',NULL,'2019-12-10 18:06:52'),(4,'Albanian',NULL,'2019-12-10 18:06:52'),(5,'Amharic',NULL,'2019-12-10 18:06:52'),(6,'Anuak',NULL,'2019-12-10 18:06:52'),(7,'Apache',NULL,'2019-12-10 18:06:52'),(8,'Arabic',NULL,'2019-12-10 18:06:52'),(9,'Arapaho',NULL,'2019-12-10 18:06:52'),(10,'Armenian',NULL,'2019-12-10 18:06:52'),(11,'Awadhi',NULL,'2019-12-10 18:06:52'),(12,'Bambara',NULL,'2019-12-10 18:06:52'),(13,'Bangla',NULL,'2019-12-10 18:06:52'),(14,'Bassa',NULL,'2019-12-10 18:06:52'),(15,'Bemba',NULL,'2019-12-10 18:06:52'),(16,'Bengali',NULL,'2019-12-10 18:06:52'),(17,'Bisayan',NULL,'2019-12-10 18:06:52'),(18,'Bosnian',NULL,'2019-12-10 18:06:52'),(19,'Bulgarian',NULL,'2019-12-10 18:06:52'),(20,'Burmese',NULL,'2019-12-10 18:06:52'),(21,'Canjobal',NULL,'2019-12-10 18:06:52'),(22,'Cantonese',NULL,'2019-12-10 18:06:52'),(23,'Cebuano',NULL,'2019-12-10 18:06:52'),(24,'Chamorro (Guam)',NULL,'2019-12-10 18:06:52'),(25,'Cheyenne',NULL,'2019-12-10 18:06:52'),(26,'Chinese',NULL,'2019-12-10 18:06:52'),(27,'Chinese - Hakka',NULL,'2019-12-10 18:06:52'),(28,'Chinese - Mandarin',NULL,'2019-12-10 18:06:52'),(29,'Chinese - Wu',NULL,'2019-12-10 18:06:52'),(30,'Chinese - Yue (Cantonese)',NULL,'2019-12-10 18:06:52'),(31,'Choctaw',NULL,'2019-12-10 18:06:52'),(32,'Chuukese/trukese',NULL,'2019-12-10 18:06:52'),(33,'Creek',NULL,'2019-12-10 18:06:52'),(34,'Creole',NULL,'2019-12-10 18:06:52'),(35,'Crow',NULL,'2019-12-10 18:06:52'),(36,'Czech',NULL,'2019-12-10 18:06:52'),(37,'Danish',NULL,'2019-12-10 18:06:52'),(38,'Dari',NULL,'2019-12-10 18:06:52'),(39,'Dinka',NULL,'2019-12-10 18:06:52'),(40,'Dutch',NULL,'2019-12-10 18:06:52'),(41,'Efik',NULL,'2019-12-10 18:06:52'),(42,'Eleme',NULL,'2019-12-10 18:06:52'),(43,'English',NULL,'2019-12-10 18:06:52'),(44,'Eritrean',NULL,'2019-12-10 18:06:52'),(45,'Ewe',NULL,'2019-12-10 18:06:52'),(46,'Fante',NULL,'2019-12-10 18:06:52'),(47,'Farsi',NULL,'2019-12-10 18:06:52'),(48,'Farsi - Eastern',NULL,'2019-12-10 18:06:52'),(49,'Farsi - Western',NULL,'2019-12-10 18:06:52'),(50,'Finnish',NULL,'2019-12-10 18:06:52'),(51,'Fon',NULL,'2019-12-10 18:06:52'),(52,'French',NULL,'2019-12-10 18:06:52'),(53,'Fulani',NULL,'2019-12-10 18:06:52'),(54,'Ga',NULL,'2019-12-10 18:06:52'),(55,'Gaelic',NULL,'2019-12-10 18:06:52'),(56,'German',NULL,'2019-12-10 18:06:52'),(57,'Grebo',NULL,'2019-12-10 18:06:52'),(58,'Greek',NULL,'2019-12-10 18:06:52'),(59,'Gujarati',NULL,'2019-12-10 18:06:52'),(60,'Gula',NULL,'2019-12-10 18:06:52'),(61,'Haitian - Creole French',NULL,'2019-12-10 18:06:52'),(62,'Harari',NULL,'2019-12-10 18:06:52'),(63,'Hausa',NULL,'2019-12-10 18:06:52'),(64,'Hawaiian',NULL,'2019-12-10 18:06:52'),(65,'Hebrew',NULL,'2019-12-10 18:06:52'),(66,'Hindi',NULL,'2019-12-10 18:06:52'),(67,'Historical Language 0015',NULL,'2019-12-10 18:06:52'),(68,'Historical Language 7200',NULL,'2019-12-10 18:06:52'),(69,'Hmong',NULL,'2019-12-10 18:06:52'),(70,'Hopi',NULL,'2019-12-10 18:06:52'),(71,'Hungarian',NULL,'2019-12-10 18:06:52'),(72,'Ibo',NULL,'2019-12-10 18:06:52'),(73,'Icelandic',NULL,'2019-12-10 18:06:52'),(74,'Igbo',NULL,'2019-12-10 18:06:52'),(75,'Ilocano',NULL,'2019-12-10 18:06:52'),(76,'Indonesian',NULL,'2019-12-10 18:06:52'),(77,'Italian',NULL,'2019-12-10 18:06:52'),(78,'Japanese',NULL,'2019-12-10 18:06:52'),(79,'Kannada',NULL,'2019-12-10 18:06:52'),(80,'Karelian',NULL,'2019-12-10 18:06:52'),(81,'Karen',NULL,'2019-12-10 18:06:52'),(82,'Kazakh',NULL,'2019-12-10 18:06:52'),(83,'Keres - Eastern',NULL,'2019-12-10 18:06:52'),(84,'Khmer',NULL,'2019-12-10 18:06:52'),(85,'Kickapoo',NULL,'2019-12-10 18:06:52'),(86,'Kikuyu',NULL,'2019-12-10 18:06:52'),(87,'Kinyarwanda',NULL,'2019-12-10 18:06:52'),(88,'Kirghiz',NULL,'2019-12-10 18:06:52'),(89,'Kirundi',NULL,'2019-12-10 18:06:52'),(90,'Kongo',NULL,'2019-12-10 18:06:52'),(91,'Konkani',NULL,'2019-12-10 18:06:52'),(92,'Korean',NULL,'2019-12-10 18:06:52'),(93,'Kpelle',NULL,'2019-12-10 18:06:52'),(94,'Krahn',NULL,'2019-12-10 18:06:52'),(95,'Krio',NULL,'2019-12-10 18:06:52'),(96,'Kru',NULL,'2019-12-10 18:06:52'),(97,'Kurdish',NULL,'2019-12-10 18:06:52'),(98,'Lakota',NULL,'2019-12-10 18:06:52'),(99,'Lao',NULL,'2019-12-10 18:06:52'),(100,'Latvian',NULL,'2019-12-10 18:06:52'),(101,'Lebanese',NULL,'2019-12-10 18:06:52'),(102,'Liberian English',NULL,'2019-12-10 18:06:52'),(103,'Lingala',NULL,'2019-12-10 18:06:52'),(104,'Lithuanian',NULL,'2019-12-10 18:06:52'),(105,'Luganda',NULL,'2019-12-10 18:06:52'),(106,'Lwo',NULL,'2019-12-10 18:06:52'),(107,'Maay',NULL,'2019-12-10 18:06:52'),(108,'Malagasy',NULL,'2019-12-10 18:06:52'),(109,'Malay',NULL,'2019-12-10 18:06:52'),(110,'Malayalam',NULL,'2019-12-10 18:06:52'),(111,'Malinke',NULL,'2019-12-10 18:06:52'),(112,'Mandan',NULL,'2019-12-10 18:06:52'),(113,'Mandarin',NULL,'2019-12-10 18:06:52'),(114,'Mandinka',NULL,'2019-12-10 18:06:52'),(115,'Marathi',NULL,'2019-12-10 18:06:52'),(116,'Marshallese',NULL,'2019-12-10 18:06:52'),(117,'Maya',NULL,'2019-12-10 18:06:52'),(118,'Mende',NULL,'2019-12-10 18:06:52'),(119,'Mongolian',NULL,'2019-12-10 18:06:52'),(120,'Mono',NULL,'2019-12-10 18:06:52'),(121,'Navajo',NULL,'2019-12-10 18:06:52'),(122,'Ndebele',NULL,'2019-12-10 18:06:52'),(123,'Nepali',NULL,'2019-12-10 18:06:52'),(124,'Northern Paiute',NULL,'2019-12-10 18:06:52'),(125,'Norwegian',NULL,'2019-12-10 18:06:52'),(126,'Nuer',NULL,'2019-12-10 18:06:52'),(127,'Nyanja',NULL,'2019-12-10 18:06:52'),(128,'Ojibwa - Eastern',NULL,'2019-12-10 18:06:52'),(129,'Oriya',NULL,'2019-12-10 18:06:52'),(130,'Oromo - West-Central',NULL,'2019-12-10 18:06:52'),(131,'Palau',NULL,'2019-12-10 18:06:52'),(132,'Palauan',NULL,'2019-12-10 18:06:52'),(133,'Pampangoan',NULL,'2019-12-10 18:06:52'),(134,'Panjabi',NULL,'2019-12-10 18:06:52'),(135,'Panjabi - Western',NULL,'2019-12-10 18:06:52'),(136,'Pashto',NULL,'2019-12-10 18:06:52'),(137,'Patois',NULL,'2019-12-10 18:06:52'),(138,'Philipino',NULL,'2019-12-10 18:06:52'),(139,'Polish',NULL,'2019-12-10 18:06:52'),(140,'Portuguese',NULL,'2019-12-10 18:06:52'),(141,'Pulaar',NULL,'2019-12-10 18:06:52'),(142,'Punjami',NULL,'2019-12-10 18:06:52'),(143,'Romanian',NULL,'2019-12-10 18:06:52'),(144,'Romany',NULL,'2019-12-10 18:06:52'),(145,'Rundi',NULL,'2019-12-10 18:06:52'),(146,'Russian',NULL,'2019-12-10 18:06:52'),(147,'Rwanda',NULL,'2019-12-10 18:06:52'),(148,'Samoan',NULL,'2019-12-10 18:06:52'),(149,'Seminole',NULL,'2019-12-10 18:06:52'),(150,'Serbian',NULL,'2019-12-10 18:06:52'),(151,'Serbo-Croatian',NULL,'2019-12-10 18:06:52'),(152,'Shona',NULL,'2019-12-10 18:06:52'),(153,'Shoshone',NULL,'2019-12-10 18:06:52'),(154,'Sinhalese',NULL,'2019-12-10 18:06:52'),(155,'Sioux',NULL,'2019-12-10 18:06:52'),(156,'Slovak',NULL,'2019-12-10 18:06:52'),(157,'Slovenian',NULL,'2019-12-10 18:06:52'),(158,'Somali',NULL,'2019-12-10 18:06:52'),(159,'Soninke',NULL,'2019-12-10 18:06:52'),(160,'Spanish',NULL,'2019-12-10 18:06:52'),(161,'Susu',NULL,'2019-12-10 18:06:52'),(162,'Swahili',NULL,'2019-12-10 18:06:52'),(163,'Swedish',NULL,'2019-12-10 18:06:52'),(164,'Swiss-German',NULL,'2019-12-10 18:06:52'),(165,'Tagalog',NULL,'2019-12-10 18:06:52'),(166,'Tajik',NULL,'2019-12-10 18:06:52'),(167,'Tamil',NULL,'2019-12-10 18:06:52'),(168,'Telugu',NULL,'2019-12-10 18:06:52'),(169,'Tewa',NULL,'2019-12-10 18:06:52'),(170,'Thai',NULL,'2019-12-10 18:06:52'),(171,'Tibetan',NULL,'2019-12-10 18:06:52'),(172,'Tigrinya',NULL,'2019-12-10 18:06:52'),(173,'Tiwa Northern',NULL,'2019-12-10 18:06:52'),(174,'Toerna',NULL,'2019-12-10 18:06:52'),(175,'Tonga',NULL,'2019-12-10 18:06:52'),(176,'Trukese',NULL,'2019-12-10 18:06:52'),(177,'Turkish',NULL,'2019-12-10 18:06:52'),(178,'Twi',NULL,'2019-12-10 18:06:52'),(179,'Ukrainian',NULL,'2019-12-10 18:06:52'),(180,'Unknown',NULL,'2019-12-10 18:06:52'),(181,'Urdu',NULL,'2019-12-10 18:06:52'),(182,'Ute',NULL,'2019-12-10 18:06:52'),(183,'Uzbek',NULL,'2019-12-10 18:06:52'),(184,'Vietnamese',NULL,'2019-12-10 18:06:52'),(185,'Visayan',NULL,'2019-12-10 18:06:52'),(186,'Wolof',NULL,'2019-12-10 18:06:52'),(187,'Yakima',NULL,'2019-12-10 18:06:52'),(188,'Yapese',NULL,'2019-12-10 18:06:52'),(189,'Yiddish',NULL,'2019-12-10 18:06:52'),(190,'Yoruba',NULL,'2019-12-10 18:06:52'),(191,'Yugoslavian',NULL,'2019-12-10 18:06:52'),(192,'Zulu',NULL,'2019-12-10 18:06:52'),(193,'Zuni',NULL,'2019-12-10 18:06:52');
+/*!40000 ALTER TABLE `dim_language` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2019-12-10 23:36:46
